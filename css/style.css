@@ -10,5 +10,50 @@
 /* navbar */
 
 img[alt="logo"]{
-    width:20rem ;
+    width:3rem ;
+    padding: 10px;
+}
+
+body{
+    text-align: center;
+}
+
+span{
+    color: rgb(220, 64, 64);
+    text-decoration: underline;
+    text-shadow: yellow;
+}
+
+/* Sliding show */
+.slider {
+    width: 80%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory; 
+    margin-inline: auto;   
+    animation: sliding 10s linear infinite;
+}
+.slider >* {
+    width: 10rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+@keyframes sliding {
+    from{
+        transform: translateX(0);
+        width: 100%;
+    }
+    to {
+        transform: translateX(-70%);
+    }
+}
+
+
+
+
+
+/* card  */
+
+#product :is(card){
+    width: 18rem;
 }
